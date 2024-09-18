@@ -1,19 +1,41 @@
 import "./style.css";
+import ellipse from "./../../img/icons/ellipse_text.svg" 
 
 const Header = () => {
     return (    
+        
+
+
+
+
+        
+
+
+
+
+
+
     <header className="header">
     <div className="header__wrapper">
-        <h1 className="header__title">
-            Привет, это <em>Биржа практик</em><br />
-            Администрации Екатеринбурга<br />
-        </h1>
+        
+    
+        
+
         <div className="header__text">
-            <p>здесь ты не останешься без дела следующим летом.</p>
+            
+
+            <div className="header__background">
+                <img src={ellipse} alt="Rotating Icon" className="rotating-icon-text" />
+                <div className="tab">
+            <h1> Наступило время показать свои навыки городу и родителям, 
+                здесь ты точно сможешь реализовать себя как успешного работника. 
+                не упусти свой шанс взять в свои руки ту практику,
+                которая уже тебя заждалась  </h1>
+            </div>
+            </div>
         </div>
-        <a href="#!" className="btn">Download CV</a>
     </div>
-</header>);
+    </header>);
 }
 
 export default Header;

@@ -1,25 +1,44 @@
 .header {
 	
-	padding: 50px 0;
-	min-height: 735px;
+	padding: 50px 20px;
+	min-height: 755px;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	background-color: var(--header-bg);
-	background-image: url('./../../img/header-bg.png');
+	background-color: black;
+	background-image: url('./../../img/new_back.png');
 	background-repeat: no-repeat;
 	background-size: auto;
 	background-position: center center;
 
 	color: var(--header-text);
 	text-align: center;
+	z-index: 3;
+	font-family: '8bit', sans-serif;
+	font-size: 10px;
+}
+
+.h1 {
+	font-size: 80px;
+}
+
+.header__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Задний план */
 }
 
 .header__wrapper {
 	padding: 0 15px;
-	max-width: 660px;
+	max-width: 6600px;
 }
 
 .header__title {
@@ -48,3 +67,55 @@
 .header__text p + p {
 	margin-top: 0.5em;
 }
+
+.rotating-icon-text {
+	position: relative;
+	left: -400px;
+	top: 60px ;
+    width: 700px; /* Установите нужный размер */
+    height: 700px; /* Установите нужный размер */
+    /*background-color: black; /* Белый фон */
+    padding: 0px; /* Отступы вокруг картинки */
+    border-radius: 50%; /* Закругленные края, если хотите круг */
+    animation: rotate 10s linear infinite;
+    /*box-sizing: border-box; /* Учитывать padding в общей ширине и высоте */
+}
+
+
+.tab{
+	background-color: transparent;
+	backdrop-filter: blur(10px);
+	position: absolute;
+
+	left: 850px;
+	top: 500px ;
+	width: 550px;
+	height: 290px;
+	font-size: 22px;
+	border-radius: 10%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@font-face {
+	font-family: "valisca";
+	src: url("./../../fonts/Valisca.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+
+  }
+
+  @font-face {
+	font-family: "8bit";
+	src: url("./../../fonts/Visitor\ Rus.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+
+  }
