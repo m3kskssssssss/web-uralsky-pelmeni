@@ -10,6 +10,8 @@ import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import Contacts from "./pages/Contacts";
 import Personal from "./pages/Personal";
+import Login from './components/navbar/Login';
+import Register from "./components/navbar/Register";
 
 import ScrollToTop from "./utils/scrollToTop";
 
@@ -25,6 +27,8 @@ function App() {
           <Route path="/project/:id" element={<Project />}/>
           <Route path="/contacts" element={<Contacts />}/>
           <Route path="/personal" element={<Personal />}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
 
         <Project />

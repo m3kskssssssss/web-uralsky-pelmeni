@@ -11,10 +11,6 @@ const Contacts = () => {
                     <p>Администрация города Екатеринбург, Россия</p>
                 </li>
                 <li className="content-list__item">
-                    <h2 className="title-2">Telegram / WhatsApp</h2>
-                    <p><a href="tel:+79051234567">+7 (901) 220-50-40</a></p>
-                </li>
-                <li className="content-list__item">
                     <h2 className="title-2">Email</h2>
                     <p><a href="mailto:webdev@protonmail.com">ekb@uralmash.zavod</a></p>
                 </li>

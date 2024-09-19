@@ -77,7 +77,7 @@
     /*background-color: black; /* Белый фон */
     padding: 0px; /* Отступы вокруг картинки */
     border-radius: 50%; /* Закругленные края, если хотите круг */
-    animation: rotate 10s linear infinite;
+    animation: rotate 20s linear infinite;
     /*box-sizing: border-box; /* Учитывать padding в общей ширине и высоте */
 }
 

@@ -1,82 +1,82 @@
-import moon from "./../../img/icons/moon.svg";
-import sun from "./../../img/icons/sun.svg";
+import React, { useState } from "react";
 import shest from "./../../img/icons/shest.svg";
-
-import { NavLink } from "react-router-dom";
-
+import loginIcon from "./../../img/icons/login.svg"; // Импортируйте иконку для входа
+import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 
 const Navbar = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
+    const navigate = useNavigate(); // Хук для навигации
 
     const activeLink = "nav-list__link nav-list__link--active";
     const normalLink = "nav-list__link";
 
-    return (          
-    
-    <nav className="nav">
-    <div className="container">
-        <div className="nav-row">
+    const toggleModal = () => {
+        setModalOpen(!isModalOpen);
+    };
 
-        <img src={shest} alt="Rotating Icon" className="rotating-icon" />
+    const handleLoginClick = () => {
+        navigate("/login"); // Переход на страницу входа
+        setModalOpen(false); // Закрыть модальное окно
+    };
 
-            <NavLink to="/" className="logo">
-                <strong>БИРЖА ПРАКТИК</strong>
-            </NavLink>
+    const handleRegisterClick = () => {
+        navigate("/register"); // Переход на страницу регистрации
+        setModalOpen(false); // Закрыть модальное окно
+    };
 
+    return (
+        <nav className="nav">
+            <div className="container">
+                <div className="nav-row">
+                    <img src={shest} alt="Rotating Icon" className="rotating-icon" />
+                    <NavLink to="/" className="logo">
+                        <strong>БИРЖА ПРАКТИК</strong>
+                    </NavLink>
 
+                    <ul className="nav-list">
+                        <li className="nav-list__item">
+                            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                Главная
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/projects" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                Практики
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/contacts" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                Контакты
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/personal" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                Личный кабинет
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item" onClick={toggleModal}>
+                            <NavLink className={({ isActive }) => (isActive ? normalLink : normalLink)}>
+                            <img src={loginIcon} alt="Login Icon" />
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <ul className="nav-list">
-
-
-                
-
-                <li className="nav-list__item">
-
-                <NavLink to="/" className={({isActive}) => {
-                    return isActive ? activeLink : normalLink;
-                }}>
-                    Главная
-                </NavLink>
-
-                </li>
-
-                <li className="nav-list__item">
-
-                <NavLink to="/projects" className={({isActive}) => {
-                    return isActive ? activeLink : normalLink;
-                }}>
-                    Практики
-                </NavLink>
-
-                </li>
-
-                <li className="nav-list__item">
-
-                <NavLink to="/contacts" className={({isActive}) => {
-                    return isActive ? activeLink : normalLink;
-                }}>
-                    Контакты
-                </NavLink>
-
-                </li>
-                
-                <li className="nav-list__item">
-
-                <NavLink to="/personal" className={({isActive}) => {
-                    return isActive ? activeLink : normalLink;
-                }}>
-                    Личный кабинет
-                </NavLink>
-
-                </li>
-
-
-
-            </ul>
-        </div>
-    </div>
-</nav> );
-
-}
+            {/* Модальное окно */}
+            {isModalOpen && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <button onClick={toggleModal} className="close-button">х</button>
+                        <h1>Войдите или зарегистрируйтесь</h1>
+                        <button onClick={handleLoginClick}>Вход /</button>
+                        <button onClick={handleRegisterClick}>/ Регистрация</button>
+                    </div>
+                </div>
+            )}
+        </nav>
+    );
+};
 
 export default Navbar;

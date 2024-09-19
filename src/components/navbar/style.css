@@ -1,6 +1,6 @@
 .nav {
 	position: fixed;
-	padding: 20px 0;
+	padding: 17px 0;
 	width: 100%;
 	background-color: var(--nav-bg);
 	border-bottom: 1px solid var(--nav-border);
@@ -19,11 +19,14 @@
 }
 
 .logo {
-	margin-right: auto;
-	color: var(--nav-text);
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 10px;
+	align-items: center;
+	column-gap: 40px;
 	font-size: 50px;
+	font-weight: 500;
 	font-family: '8bit', sans-serif;
-	letter-spacing: 1.5px;
 }
 
 .logo strong {
@@ -68,13 +71,68 @@
 }
 
 .rotating-icon {
-    width: 50px; /* Установите нужный размер */
-    height: 50px; /* Установите нужный размер */
+    width: 42px; /* Установите нужный размер */
+    height: 42px; /* Установите нужный размер */
     background-color: white; /* Белый фон */
     padding: 5px; /* Отступы вокруг картинки */
     border-radius: 50%; /* Закругленные края, если хотите круг */
     animation: rotate 5s linear infinite;
     box-sizing: border-box; /* Учитывать padding в общей ширине и высоте */
+}
+
+.nav-list__item {
+    display: flex;
+    align-items: center; /* Центрируем иконку по вертикали */
+}
+
+.nav-list__link img {
+    width: 30px; /* Установите нужный размер для иконки */
+    height: 30px; /* Установите нужный размер для иконки */
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+.nav-list__link--active img {
+    opacity: 0.8; /* Пример эффекта при активной ссылке */
+}
+
+.modal {
+    position: fixed;
+	padding: 20px 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+	font-size: 22px;
+	font-weight: 500;
+	font-family: '8bit', sans-serif;
+}
+
+.modal-content {
+    
+	background-color: #000000cf;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+	font-size: 22px;
+	font-weight: 500;
+	font-family: '8bit', sans-serif;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 @keyframes rotate {
