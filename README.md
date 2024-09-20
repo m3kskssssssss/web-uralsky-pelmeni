@@ -16,5 +16,13 @@ CREATE TABLE users (
     login VARCHAR(255) NOT NULL
 );
 
+port API: 5001, DataBase name: 'mydatabase', Table name: users, в server.js прописаны настройки для логина БД root без пароля, создавайте также.
+
+
+web-uralsky-pelmeni % node server/server.js 
+
+команда выше для запуска сервера!
+
+
 
 
