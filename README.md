@@ -22,9 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 Теперь mysql можно использовать в любой cli и IDE. Иногда надо перезапустить прогу или перезагрузиться.
 
-1. Пишем в консоли `mysql -u root -p root` или без пароля `mysql -u root`
+1. Пишем в консоли `mysql -u root -p` или без пароля `mysql -u root`
 2. Код ниже
-
 ```sql
 CREATE DATABASE mydatabase;
 
@@ -37,6 +36,7 @@ CREATE TABLE users (
     login VARCHAR(255) NOT NULL
 );
 ```
+3. Проверить что все ок - `SHOW DATABASES`. Будет 7 включая нашу.
 
 `port API: 5001`, `DataBase name: 'mydatabase'`, `Table name: users`, в server.js прописаны настройки для логина БД root без пароля, создавайте также.
 
