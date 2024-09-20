@@ -9,7 +9,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 # SQL DataBase & Table
 
-Запуск через psql, в нем выполняем код ниже.
+Запуск через MySQL, в нем выполняем код ниже.
 
 ```sql
 CREATE DATABASE mydatabase;
