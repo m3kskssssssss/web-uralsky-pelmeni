@@ -4,21 +4,18 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 
-// Переменные окружения
-require('dotenv').config();
-
 const app = express();
-const port = process.env.PORT;
+const port = 5001;
 
 app.use(cors());
 app.use(bodyParser.json());
 
 // Подключение к базе данных
 const db = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'mydatabase'
 });
 
 db.connect(err => {
