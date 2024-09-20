@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = 5001;
@@ -25,26 +26,51 @@ db.connect(err => {
 });
 
 // Маршрут для регистрации
-app.post('/api/register', (req, res) => {
+app.post('/api/register', async (req, res) => {
   const { email, password, login } = req.body;
-  const sql = 'INSERT INTO users (email, password_hash, login) VALUES (?, ?, ?)';
-  db.query(sql, [email, password, login], (err, result) => {
+
+  // Проверка существования email
+  const checkEmailSql = 'SELECT * FROM users WHERE email = ?';
+  db.query(checkEmailSql, [email], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.status(200).json({ message: 'User registered successfully' });
+
+    if (results.length > 0) {
+      return res.status(400).json({ error: 'Email already exists' });
+    }
+
+    // Хеширование пароля
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Вставка новой записи
+    const insertSql = 'INSERT INTO users (email, password_hash, login) VALUES (?, ?, ?)';
+    db.query(insertSql, [email, hashedPassword, login], (err, result) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      res.status(200).json({ message: 'User registered successfully' });
+    });
   });
 });
 
 // Маршрут для входа
-app.post('/api/login', (req, res) => {
+app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
-  const sql = 'SELECT * FROM users WHERE email = ? AND password_hash = ?';
-  db.query(sql, [email, password], (err, result) => {
+  const sql = 'SELECT * FROM users WHERE email = ?';
+  db.query(sql, [email], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    if (result.length > 0) {
+
+    if (results.length === 0) {
+      return res.status(401).json({ message: 'Invalid email or password' });
+    }
+
+    const user = results[0];
+    const isPasswordValid = await bcrypt.compare(password, user.password_hash);
+
+    if (isPasswordValid) {
       res.status(200).json({ message: 'Login successful' });
     } else {
       res.status(401).json({ message: 'Invalid email or password' });
