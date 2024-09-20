@@ -1,0 +1,15 @@
+.title-2 {
+    color: black;
+	text-align: center;
+	z-index: 3;
+	font-family: '8bit', sans-serif;
+	
+}
+
+@font-face {
+	font-family: "8bit";
+	src: url("./../fonts/Visitor\ Rus.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+
+  }
