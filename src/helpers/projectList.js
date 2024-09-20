@@ -65,6 +65,38 @@ const projects = [
         gitHubLink: "https://github.com"
 
     },
+    {
+        title: "Копание новых станций метро",
+        skills: "React, Node.js, MongoDB",
+        img: project06,
+        imgBig: project06Big,
+        gitHubLink: "https://github.com"
+
+    },
+    {
+        title: "Копание новых станций метро",
+        skills: "React, Node.js, MongoDB",
+        img: project06,
+        imgBig: project06Big,
+        gitHubLink: "https://github.com"
+
+    },
+    {
+        title: "Копание новых станций метро",
+        skills: "React, Node.js, MongoDB",
+        img: project06,
+        imgBig: project06Big,
+        gitHubLink: "https://github.com"
+
+    },
+    {
+        title: "Копание новых станций метро",
+        skills: "React, Node.js, MongoDB",
+        img: project06,
+        imgBig: project06Big,
+        gitHubLink: "https://github.com"
+
+    },
 ];
 
 export {projects}
