@@ -27,3 +27,4 @@ venv
 .git
 .idea
 node_modules
+.env
