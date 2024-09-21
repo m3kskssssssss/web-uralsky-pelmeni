@@ -12,14 +12,28 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/register', {
+      // Регистрация пользователя
+      const registerResponse = await axios.post('http://localhost:5001/api/register', {
         email,
         password,
         login,
         userCategory
       });
-      console.log(response.data.message);
-      navigate('/personal'); // Переход на страницу /personal
+      console.log(registerResponse.data.message);
+
+      // Вход в систему после успешной регистрации
+      const loginResponse = await axios.post('http://localhost:5001/api/login', {
+        login,
+        password,
+        userCategory
+      });
+
+      // Сохранение данных пользователя в localStorage
+      localStorage.setItem('user', JSON.stringify(loginResponse.data));
+      localStorage.setItem('userCategory', userCategory);
+
+      // Перенаправление на соответствующий личный кабинет
+      navigate(`/${userCategory}`);
     } catch (error) {
       console.error('Error registering user:', error);
     }
