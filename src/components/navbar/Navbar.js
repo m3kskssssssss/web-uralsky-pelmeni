@@ -67,11 +67,13 @@ const Navbar = () => {
                                 Контакты
                             </NavLink>
                         </li>
-                        <li className="nav-list__item" onClick={handlePersonalClick}>
-                            <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-                                Личный кабинет
-                            </NavLink>
-                        </li>
+                        {isLoggedIn() && ( // Отображаем кнопку "Личный кабинет" только для вошедших пользователей
+                            <li className="nav-list__item" onClick={handlePersonalClick}>
+                                <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                    Личный кабинет
+                                </NavLink>
+                            </li>
+                        )}
                         {!isLoggedIn() ? (
                             <li className="nav-list__item" onClick={toggleModal}>
                                 <NavLink className={({ isActive }) => (isActive ? normalLink : normalLink)}>
