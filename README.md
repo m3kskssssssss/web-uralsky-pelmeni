@@ -53,6 +53,7 @@ CREATE TABLE students (
     student_id INT UNIQUE,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
+    patronimycal VARCHAR(50),
     phone VARCHAR(20) UNIQUE,
     date_of_birth DATE,
     gender ENUM('Male', 'Female'),
