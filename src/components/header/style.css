@@ -161,7 +161,7 @@
 	font-style: normal;
 	font-weight: 400;
 	color: #fffcf7;
-	animation: startLine 15s linear, marquee 15s linear 15s infinite;
+	animation: startLine 15s linear, marquee 15s linear infinite;  /*если что можно 15s -> 0s*/
 	width: 2600px;
 
   }
