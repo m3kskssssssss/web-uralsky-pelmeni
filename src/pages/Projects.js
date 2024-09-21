@@ -13,8 +13,7 @@ const Projects = () => {
     const handleSearch = (query) => {
         const lowercasedQuery = query.toLowerCase();
         const filtered = projects.filter(project =>
-            project.specialty.toLowerCase().includes(lowercasedQuery) ||
-            project.skills.toLowerCase().includes(lowercasedQuery)
+            project.name.toLowerCase().includes(lowercasedQuery)
         );
         setFilteredProjects(filtered);
     };
