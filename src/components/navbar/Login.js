@@ -9,7 +9,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-
+    
         const response = await fetch('http://localhost:5001/api/login', {
             method: 'POST',
             headers: {
@@ -17,9 +17,9 @@ const Login = () => {
             },
             body: JSON.stringify({ login, password, userCategory }), // Передаем категорию
         });
-
+    
         const data = await response.json();
-
+    
         if (response.ok) {
             // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
