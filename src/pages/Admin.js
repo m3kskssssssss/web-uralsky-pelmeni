@@ -1,7 +1,7 @@
 // Admin.js
 import React, { useState } from 'react';
 
-const Admin = () => {
+const Personal = () => {
     const [selectedCategory, setSelectedCategory] = useState('userManagement');
 
     const handleCategoryChange = (category) => {
@@ -45,4 +45,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default Personal;
