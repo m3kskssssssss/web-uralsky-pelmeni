@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+    const [userCategory, setUserCategory] = useState('student'); // Значение по умолчанию
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
@@ -14,7 +15,7 @@ const Login = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email: login, password }),
+            body: JSON.stringify({ login, password, userCategory }), // Добавляем категорию
         });
 
         const data = await response.json();
@@ -22,8 +23,8 @@ const Login = () => {
         if (response.ok) {
             // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
-            // Можно перенаправить пользователя на другую страницу
             alert('Вход успешен!');
+            // Можно перенаправить пользователя на другую страницу
         } else {
             // Ошибка входа
             setError(data.message);
@@ -54,6 +55,16 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
+                            <select
+                                className="title-2"
+                                value={userCategory}
+                                onChange={(e) => setUserCategory(e.target.value)}
+                                required
+                            >
+                                <option value="student">Студент</option>
+                                <option value="teacher">Университет/СПО</option>
+                                <option value="enterprise">Предприятие</option>
+                            </select>
                             <button className="title-2" type="submit">Войти</button>
                         </form>
                     </li>

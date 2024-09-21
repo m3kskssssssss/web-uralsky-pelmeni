@@ -29,8 +29,9 @@ const Personal = () => {
                                 <input type="text" placeholder="Фамилия" />
                                 <input type="text" placeholder="Отчество" />
                                 <input type="number" placeholder="Возраст" />
+                                <p type="text">Пол</p>
                                 <select>
-                                    <option value="">Пол</option>
+                                    <option value=""></option>
                                     <option value="male">Мужской</option>
                                     <option value="female">Женский</option>
                                 </select>

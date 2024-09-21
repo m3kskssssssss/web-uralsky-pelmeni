@@ -72,15 +72,31 @@ app.post('/api/register', async (req, res) => {
 
 // Маршрут для входа
 app.post('/api/login', async (req, res) => {
-  const { email, password } = req.body;
-  const sql = 'SELECT * FROM students WHERE email = ?';
-  db.query(sql, [email], async (err, results) => {
+  const { login, password, userCategory } = req.body;
+
+  let tableName;
+  switch (userCategory) {
+    case 'student':
+      tableName = 'students';
+      break;
+    case 'teacher':
+      tableName = 'universities';
+      break;
+    case 'enterprise':
+      tableName = 'companies';
+      break;
+    default:
+      return res.status(400).json({ message: 'Invalid user category' });
+  }
+
+  const sql = `SELECT * FROM ${tableName} WHERE login = ?`;
+  db.query(sql, [login], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
 
     if (results.length === 0) {
-      return res.status(401).json({ message: 'Invalid email or password' });
+      return res.status(401).json({ message: 'Invalid login or password' });
     }
 
     const user = results[0];
@@ -89,7 +105,7 @@ app.post('/api/login', async (req, res) => {
     if (isPasswordValid) {
       res.status(200).json({ message: 'Login successful' });
     } else {
-      res.status(401).json({ message: 'Invalid email or password' });
+      res.status(401).json({ message: 'Invalid login or password' });
     }
   });
 });

@@ -60,7 +60,7 @@ const Register = () => {
                 required
               >
                 <option value="student">Студент</option>
-                <option value="teacher">Преподаватель</option>
+                <option value="teacher">Университет/СПО</option>
                 <option value="enterprise">Предприятие</option>
               </select>
               <button className="title-2" type="submit">Зарегистрироваться</button>
