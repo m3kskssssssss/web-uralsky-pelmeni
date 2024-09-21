@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const University = () => {
+const Personal = () => {
     const [selectedCategory, setSelectedCategory] = useState('personalInfo');
 
     const handleCategoryChange = (category) => {
@@ -50,4 +50,4 @@ const University = () => {
     );
 };
 
-export default University;
+export default Personal;
