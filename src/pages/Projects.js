@@ -4,10 +4,11 @@ import Search from "./Search";
 import Filters from "./Filters"; // Импортируйте компонент фильтров
 import { useState } from "react";
 import "./style.css";
+import "./Projects.css";
 
 const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    
+
     const handleSearch = (query) => {
         const lowercasedQuery = query.toLowerCase();
         const filtered = projects.filter(project =>
@@ -34,10 +35,10 @@ const Projects = () => {
         setFilteredProjects(filtered);
     };
 
-    return ( 
+    return (
         <main className="section">
             <div className="container">
-                
+
                 <div className="search-filters-container">
                     <Search onSearch={handleSearch} />
                     <Filters onFilter={handleFilter} />
@@ -48,8 +49,9 @@ const Projects = () => {
                             <li key={index}>
                                 <Link to={`/project/${index}`}>
                                     <div className="project">
-                                        <h1 className="title-2">{project.title}</h1>
-                                        <img src={project.img} alt={project.title} />
+                                        <img src={project.img} alt={project.title}/>
+                                        <h1 className="title-2">{project.specialty}</h1>
+                                        <h1 className="title-2">От {project.company}</h1>
                                     </div>
                                 </Link>
                             </li>
