@@ -34,6 +34,9 @@ app.post('/api/register', async (req, res) => {
     case 'enterprise':
       tableName = 'companies';
       break;
+    case 'admin':
+      tableName = 'admins'; // Предполагается, что у вас есть таблица admins
+      break;
     default:
       return res.status(400).json({ error: 'Invalid user category' });
   }
@@ -73,6 +76,9 @@ app.post('/api/login', async (req, res) => {
       case 'enterprise':
           tableName = 'companies';
           break;
+      case 'admin':
+        tableName = 'admins'; // Предполагается, что у вас есть таблица admins
+        break;
       default:
           return res.status(400).json({ message: 'Invalid user category' });
   }

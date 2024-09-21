@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import Contacts from "./pages/Contacts";
 import Personal from "./pages/Personal";
 import Company from "./pages/Company";
+import Admin from './pages/Admin'
 import University from "./pages/University";
 import Login from './components/navbar/Login';
 import Register from "./components/navbar/Register";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/enterprise" element={<Company />} />
           <Route path="/teacher" element={<University />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
 
         <Project />
