@@ -22,81 +22,81 @@ const projects = [
         skills: "React, Node.js, MongoDB",
         img: project01,
         imgBig: project01Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Информационные технологии, системная интеграция, интернет",
+        specialty: "Frontend",
+        salary: 50000,
+        employmentType: "Полная занятость",
+        education: "высшее",
+        internshipFormat: "дистанционно"
     },
     {
-        title: "Депутат",
-        skills: "React, Node.js, MongoDB",
+        title: "Екатеринбургский завод цветных металлов",
+        skills: "C++, Python, SQL",
         img: project02,
         imgBig: project02Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Металлургия, производство",
+        specialty: "Backend",
+        salary: 60000,
+        employmentType: "Полная занятость",
+        education: "высшее",
+        internshipFormat: "очное"
     },
     {
-        title: "Химмаш завод",
-        skills: "React, Node.js, MongoDB",
+        title: "КБ 'Уралтрансмаш'",
+        skills: "Java, Spring, PostgreSQL",
         img: project03,
         imgBig: project03Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Производство, машиностроение",
+        specialty: "Fullstack",
+        salary: 70000,
+        employmentType: "Полная занятость",
+        education: "высшее",
+        internshipFormat: "гибридно"
     },
     {
-        title: "Вебкам",
-        skills: "React, Node.js, MongoDB",
+        title: "Уральская горно-металлургическая компания",
+        skills: "HTML, CSS, JavaScript",
         img: project04,
         imgBig: project04Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Горная промышленность",
+        specialty: "Frontend",
+        salary: 55000,
+        employmentType: "Частичная занятость",
+        education: "высшее",
+        internshipFormat: "дистанционно"
     },
     {
-        title: "Казик",
-        skills: "React, Node.js, MongoDB",
+        title: "Академия цифровых технологий",
+        skills: "Python, Django, React",
         img: project05,
         imgBig: project05Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Образование, IT",
+        specialty: "Backend",
+        salary: 48000,
+        employmentType: "Полная занятость",
+        education: "высшее",
+        internshipFormat: "онлайн"
     },
     {
-        title: "Копание новых станций метро",
-        skills: "React, Node.js, MongoDB",
+        title: "Екатеринбургский завод 'Трансформатор'",
+        skills: "C#, .NET, Azure",
         img: project06,
         imgBig: project06Big,
-        gitHubLink: "https://github.com"
-
+        gitHubLink: "https://github.com",
+        industry: "Энергетика, производство",
+        specialty: "Fullstack",
+        salary: 65000,
+        employmentType: "Полная занятость",
+        education: "высшее",
+        internshipFormat: "гибридно"
     },
-    {
-        title: "Копание новых станций метро",
-        skills: "React, Node.js, MongoDB",
-        img: project06,
-        imgBig: project06Big,
-        gitHubLink: "https://github.com"
+    
 
-    },
-    {
-        title: "Копание новых станций метро",
-        skills: "React, Node.js, MongoDB",
-        img: project06,
-        imgBig: project06Big,
-        gitHubLink: "https://github.com"
-
-    },
-    {
-        title: "Копание новых станций метро",
-        skills: "React, Node.js, MongoDB",
-        img: project06,
-        imgBig: project06Big,
-        gitHubLink: "https://github.com"
-
-    },
-    {
-        title: "Копание новых станций метро",
-        skills: "React, Node.js, MongoDB",
-        img: project06,
-        imgBig: project06Big,
-        gitHubLink: "https://github.com"
-
-    },
 ];
 
 export {projects}
