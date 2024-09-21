@@ -61,6 +61,7 @@ const Login = () => {
                                 <option value="student">Студент</option>
                                 <option value="teacher">Учитель</option>
                                 <option value="enterprise">Предприятие</option>
+                                <option value="admin">Администратор</option>
                             </select>
                             <button className="title-2" type="submit">Войти</button>
                         </form>
