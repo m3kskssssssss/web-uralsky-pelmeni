@@ -3,17 +3,6 @@ import ellipse from "./../../img/icons/ellipse_text.svg"
 
 const Header = () => {
     return (    
-        
-
-
-
-
-        
-
-
-
-
-
 
     <header className="header">
     <div className="header__wrapper">
@@ -27,10 +16,29 @@ const Header = () => {
             <div className="header__background">
                 <img src={ellipse} alt="Rotating Icon" className="rotating-icon-text" />
                 <div className="tab">
-            <h1> Наступило время показать свои навыки городу и родителям, 
-                здесь ты точно сможешь реализовать себя как успешного работника. 
-                не упусти свой шанс взять в свои руки ту практику,
-                которая уже тебя заждалась  </h1>
+            <h1> Производственные практики играют важную роль в образовательном 
+                процессе и подготовке специалистов. Они позволяют студентам и 
+                молодым специалистам получить практический опыт, который невозможно 
+                приобрести только в рамках теоретических занятий. <div class="tickers">
+  <div class="ticker">
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+    <h2 class="ticker__head">ПРАКТИКА</h2>
+  </div>
+</div> </h1>
             </div>
             </div>
         </div>

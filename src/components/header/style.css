@@ -83,17 +83,84 @@
 
 
 .tab{
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.656);
 	backdrop-filter: blur(10px);
 	position: absolute;
-
+	padding: 1%;
 	left: 850px;
-	top: 500px ;
+	top: 400px ;
 	width: 550px;
-	height: 290px;
-	font-size: 22px;
-	border-radius: 10%;
+	height: 292px;
+	font-size: 26px;
+	border-radius: 5%;
+	text-align: left ;
+	z-index: 10;
+	
 }
+
+.ticker-inline {
+	margin: 0 auto;
+	overflow: hidden;
+  }
+  
+  .ticker-inline-bottom-trial {
+	margin-bottom: 4rem;
+  }
+  
+  .tickers {
+	position: fixed;
+	display: inline-block;
+	white-space: nowrap;
+	width: 1470px;
+	left: -850px;
+	top: 350px;
+	background: #181818;
+	overflow: hidden;
+	z-index: 0;
+  }
+  
+  .ticker1 {
+	position: absolute;
+	top: 2px;
+	left: -110%;
+	animation: marquee1 1s linear infinite;
+  }
+  
+  .ticker {
+	display: flex;
+	font-family: var(--font-first);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 400;
+	color: #fffcf7;
+	animation: startLine 15s linear, marquee 15s linear 15s infinite;
+	width: 2600px;
+	
+  }
+  
+  .ticker__head {
+	width: 430px;
+	text-align: center;
+	margin-left: auto;
+  }
+  
+  @keyframes startLine {
+	0% {
+	  transform: translateX(-1000%);
+	}
+	100% {
+	  transform: translateX(-50%);
+	}
+  }
+  
+  @keyframes marquee {
+	0% {
+	  transform: translateX(-10%);
+	}
+	100% {
+	  transform: translateX(0%);
+	}
+  }
 
 @keyframes rotate {
     from {
@@ -119,3 +186,5 @@
 	font-weight: normal;
 
   }
+
+  

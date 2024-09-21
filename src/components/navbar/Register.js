@@ -5,6 +5,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, setLogin] = useState('');
+  const [userCategory, setUserCategory] = useState('student'); // Значение по умолчанию
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,7 +13,8 @@ const Register = () => {
       const response = await axios.post('http://localhost:5001/api/register', {
         email,
         password,
-        login
+        login,
+        userCategory // Добавляем категорию пользователя в запрос
       });
       console.log(response.data.message);
     } catch (error) {
@@ -51,6 +53,16 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
+              <select
+                className="title-2"
+                value={userCategory}
+                onChange={(e) => setUserCategory(e.target.value)}
+                required
+              >
+                <option value="student">Студент</option>
+                <option value="teacher">Преподаватель</option>
+                <option value="enterprise">Предприятие</option>
+              </select>
               <button className="title-2" type="submit">Зарегистрироваться</button>
             </form>
           </li>
