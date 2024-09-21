@@ -18,20 +18,21 @@ const Project = () => {
                 {project && (
                     <div className="project-details">
                         {/* Заголовок проекта */}
-                        <h2 className="title-1">{project.specialty}</h2>
+                        <h2 className="title-1">{project.name}</h2>
 
                         <div className="project-details__content">
                             {/* Изображение проекта */}
                             <img
                                 src={project.imgBig}
-                                alt={project.title}
+                                alt={project.name}
                                 className="project-details__cover"
                             />
 
                             {/* Описание проекта */}
                             <div className="project-details__desc">
                                 {/* Даты проведения */}
-                                <p><strong>Даты проведения: </strong> {project.date}</p>
+                                <p><strong>Дата начала: </strong> {project.start_date}</p>
+                                <p><strong>Дата окончания: </strong> {project.end_date}</p>
 
                                 {/* Описание практики */}
                                 <p><strong>О практике: </strong> {project.description}</p>

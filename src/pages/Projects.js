@@ -50,7 +50,7 @@ const Projects = () => {
                                 <Link to={`/project/${index}`}>
                                     <div className="project">
                                         <img src={project.img} alt={project.title}/>
-                                        <h1 className="title-2">{project.specialty}</h1>
+                                        <h1 className="title-2">{project.name}</h1>
                                         <h1 className="title-2">От {project.company}</h1>
                                     </div>
                                 </Link>
