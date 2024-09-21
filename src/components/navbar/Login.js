@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+    const [userCategory, setUserCategory] = useState('student');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // Инициализируем хук
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,18 +17,16 @@ const Login = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email: login, password }),
+            body: JSON.stringify({ login, password, userCategory }),
         });
 
         const data = await response.json();
 
         if (response.ok) {
-            // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
-            // Можно перенаправить пользователя на другую страницу
             alert('Вход успешен!');
+            navigate('/projects'); // Переход на страницу /projects
         } else {
-            // Ошибка входа
             setError(data.message);
         }
     };
@@ -54,6 +55,16 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
+                            <select
+                                className="title-2"
+                                value={userCategory}
+                                onChange={(e) => setUserCategory(e.target.value)}
+                                required
+                            >
+                                <option value="student">Студент</option>
+                                <option value="teacher">Университет/СПО</option>
+                                <option value="enterprise">Предприятие</option>
+                            </select>
                             <button className="title-2" type="submit">Войти</button>
                         </form>
                     </li>

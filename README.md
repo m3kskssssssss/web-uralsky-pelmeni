@@ -95,7 +95,8 @@ CREATE TABLE practice (
     end_date DATE NOT NULL,
     salary DECIMAL(10, 2) NOT NULL,
     description TEXT,
-    places INT NOT NULL
+    places INT NOT NULL,
+    image_data LONGBLOB
 );
 
 CREATE TABLE practice_offer (

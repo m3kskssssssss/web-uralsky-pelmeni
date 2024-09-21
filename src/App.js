@@ -10,6 +10,8 @@ import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import Contacts from "./pages/Contacts";
 import Personal from "./pages/Personal";
+import Company from "./pages/Company";
+import University from "./pages/University";
 import Login from './components/navbar/Login';
 import Register from "./components/navbar/Register";
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/personal" element={<Personal />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/university" element={<University />} />
         </Routes>
 
         <Project />

@@ -99,10 +99,13 @@
 }
 
 .categories {
-    width: 15%; /* Ширина для списка категорий */
+    width: 25%; /* Ширина для списка категорий */
     padding: 20px;
-    background-color: #f9f9f9; /* Цвет фона для категорий */
-    border-right: 1px solid #ccc; /* Разделительная линия */
+    background-color: #ffffff; /* Цвет фона для категорий */
+    border-right: 1px solid #cccccc; /* Разделительная линия */
+    font-family: '8bit', sans-serif;
+	color: white;
+    font-size: 20px; 
 }
 
 .categories ul {
@@ -113,7 +116,7 @@
 .categories li {
     cursor: pointer;
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: #fcb440;
     margin-bottom: 5px;
     text-align: center;
     border-radius: 4px; /* Закругленные углы */
