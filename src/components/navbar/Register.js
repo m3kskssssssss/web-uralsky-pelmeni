@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, setLogin] = useState('');
-  const [userCategory, setUserCategory] = useState('student'); // Значение по умолчанию
+  const [userCategory, setUserCategory] = useState('student');
+  const navigate = useNavigate(); // Инициализируем хук
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,9 +16,10 @@ const Register = () => {
         email,
         password,
         login,
-        userCategory // Добавляем категорию пользователя в запрос
+        userCategory
       });
       console.log(response.data.message);
+      navigate('/personal'); // Переход на страницу /personal
     } catch (error) {
       console.error('Error registering user:', error);
     }
