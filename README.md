@@ -47,16 +47,16 @@ USE university_system;
 
 CREATE TABLE students (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
     login VARCHAR(30) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
     student_id INT UNIQUE,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    email VARCHAR(100) UNIQUE NOT NULL,
     phone VARCHAR(20) UNIQUE,
     date_of_birth DATE,
-    gender ENUM('Male', 'Female', 'Other'),
+    gender ENUM('Male', 'Female'),
     education_level VARCHAR(50),
-    password_hash VARCHAR(255) NOT NULL,
     registration_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     status ENUM('Active', 'Inactive')
 );
@@ -79,8 +79,8 @@ CREATE TABLE companies (
 CREATE TABLE universities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
     login VARCHAR(30) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
     university_name VARCHAR(100),
     contact_person VARCHAR(100),
     phone VARCHAR(20) UNIQUE,
