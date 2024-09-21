@@ -13,6 +13,7 @@ import Personal from "./pages/Personal";
 import Company from "./pages/Company";
 import University from "./pages/University";
 import Login from './components/navbar/Login';
+import AdminDashboard from './pages/AdminDashboard';
 import Register from "./components/navbar/Register";
 
 import ScrollToTop from "./utils/scrollToTop";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/enterprise" element={<Company />} />
           <Route path="/teacher" element={<University />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
 
         <Project />
