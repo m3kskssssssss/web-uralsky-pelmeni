@@ -15,7 +15,7 @@ const Personal = () => {
                 <div className="personal-dashboard">
                     <div className="categories">
                         <h2 className="title-2">Выберите категорию</h2>
-                        <ul>
+                        <ul >
                             <li onClick={() => handleCategoryChange('personalInfo')}>Личная информация</li>
                             <li onClick={() => handleCategoryChange('interests')}>Мои интересы</li>
                         </ul>

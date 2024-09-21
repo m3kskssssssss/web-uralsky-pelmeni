@@ -70,8 +70,8 @@ const Navbar = () => {
                     <div className="modal-content">
                         <button onClick={toggleModal} className="close-button">х</button>
                         <h1>Войдите или зарегистрируйтесь</h1>
-                        <button onClick={handleLoginClick}>Вход /</button>
-                        <button onClick={handleRegisterClick}>/ Регистрация</button>
+                        <button onClick={handleLoginClick}>Вход</button>
+                        <button onClick={handleRegisterClick}>Регистрация</button>
                     </div>
                 </div>
             )}
