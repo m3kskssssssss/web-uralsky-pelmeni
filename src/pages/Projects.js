@@ -37,9 +37,11 @@ const Projects = () => {
     return ( 
         <main className="section">
             <div className="container">
-                <h2 className="title-1">Доступные практики:</h2>
-                <Search onSearch={handleSearch} />
-                <Filters onFilter={handleFilter} /> {/* Добавьте компонент фильтров */}
+                
+                <div className="search-filters-container">
+                    <Search onSearch={handleSearch} />
+                    <Filters onFilter={handleFilter} />
+                </div>
                 <ul className="projects">
                     {filteredProjects.map((project, index) => {
                         return (
