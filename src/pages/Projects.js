@@ -5,6 +5,7 @@ import Filters from "./Filters"; // Импортируйте компонент 
 import { useState } from "react";
 import "./style.css";
 import "./Projects.css";
+import "./Filters.css";
 
 const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -39,7 +40,7 @@ const Projects = () => {
         <main className="section">
             <div className="container">
 
-                <div className="search-filters-container">
+                <div className="search-filters-container filter-container">
                     <Search onSearch={handleSearch} />
                     <Filters onFilter={handleFilter} />
                 </div>

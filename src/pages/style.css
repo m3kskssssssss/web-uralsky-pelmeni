@@ -30,7 +30,7 @@
 }
 
 .search button {
-    padding: 10px 25px;
+    /*padding: 10px 25px;*/
     background-color: #ffb700;
     color: white;
     border: none;
@@ -39,7 +39,7 @@
     font-family: '8bit', sans-serif;
     margin-left: 10px; /* Отступ между кнопками */
     width: 120px; /* Задайте желаемую ширину */
-    height: 60px; /* Задайте желаемую высоту */
+    height: 40px; /* Задайте желаемую высоту */
 }
 
 .search button:hover {
