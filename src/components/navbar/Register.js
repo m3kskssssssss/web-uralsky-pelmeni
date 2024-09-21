@@ -79,6 +79,7 @@ const Register = () => {
                 <option value="student">Студент</option>
                 <option value="teacher">Университет/СПО</option>
                 <option value="enterprise">Предприятие</option>
+                <option value="admin">Администратор</option> {/* Новая категория */}
               </select>
               <button className="title-2" type="submit">Зарегистрироваться</button>
             </form>
