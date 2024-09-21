@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '1234qw', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
+    password: '', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
     database: 'practice_system'
 });
 
@@ -23,6 +23,17 @@ db.connect(err => {
     }
     console.log('MySQL connected...');
 });
+
+// Маршрут для получения данных из таблицы practice
+app.get('/api/practice', (req, res) => {
+    const sql = 'SELECT * FROM practice';
+    db.query(sql, (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      res.status(200).json(results);
+    });
+  });
 
 // Маршрут для регистрации
 app.post('/api/register', async (req, res) => {
