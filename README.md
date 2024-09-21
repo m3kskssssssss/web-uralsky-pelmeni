@@ -1,6 +1,6 @@
 # ВАЖНОЕ
 
-меняйте свой password в server/server.js
+Меняйте свой password в server/server.js
 
 # Run webserver
 
@@ -36,14 +36,14 @@ node server/server.js
 
 ## Создание таблицы БД
 
-Если мешается, то можно DROP DATABASE mydatabase.
+Если мешается, то можно DROP DATABASE лишняя_база_данных.
 
 1. Пишем в консоли `mysql -u root -p` или без пароля `mysql -u root`
 2. Код ниже
 ```sql
-CREATE DATABASE university_system;
+CREATE DATABASE practice_system;
 
-USE university_system;
+USE practice_system;
 
 CREATE TABLE students (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -105,7 +105,7 @@ CREATE TABLE practice_offer (
     salary DECIMAL(10, 2) NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
-    status ENUM('Pending', 'Approved', 'Rejected') NOT NULL,
+    status ENUM('Отправлено', 'Принято', 'Отклонено') NOT NULL,
     date_of_application DATETIME DEFAULT CURRENT_TIMESTAMP,
     student_id INT NOT NULL,
     FOREIGN KEY (student_id) REFERENCES students(id),
