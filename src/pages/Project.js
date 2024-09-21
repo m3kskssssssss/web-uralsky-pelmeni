@@ -63,6 +63,9 @@ const Project = () => {
                                 <p><strong>Количество мест: </strong> {project.places}</p>
                             </div>
                         </div>
+
+                        {/* Кнопка "Зарегистрироваться на практику" */}
+                        <button className="btn btn-primary">Зарегистрироваться на практику</button>
                     </div>
                 )}
             </div>
