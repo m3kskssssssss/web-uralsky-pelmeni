@@ -46,56 +46,56 @@ CREATE DATABASE university_system;
 USE university_system;
 
 CREATE TABLE students (
-login VARCHAR(30) NOT NULL,
-student_id INT UNIQUE,
-first_name VARCHAR(50),
-last_name VARCHAR(50),
-email VARCHAR(100) UNIQUE NOT NULL,
-phone VARCHAR(20) UNIQUE,
-date_of_birth DATE,
-gender ENUM('Male', 'Female', 'Other'),
-education_level VARCHAR(50),
-password_hash VARCHAR(255) NOT NULL,
-registration_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-id INT AUTO_INCREMENT PRIMARY KEY,
-status ENUM('Active', 'Inactive')
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(30) NOT NULL,
+    student_id INT UNIQUE,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20) UNIQUE,
+    date_of_birth DATE,
+    gender ENUM('Male', 'Female', 'Other'),
+    education_level VARCHAR(50),
+    password_hash VARCHAR(255) NOT NULL,
+    registration_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('Active', 'Inactive')
 );
 
 CREATE TABLE companies (
-id INT AUTO_INCREMENT PRIMARY KEY,
-email VARCHAR(100) UNIQUE NOT NULL,
-login VARCHAR(30) NOT NULL,
-password_hash VARCHAR(255) NOT NULL,
-company_name VARCHAR(100),
-registration_number VARCHAR(20) UNIQUE,
-contact_person VARCHAR(100),
-phone VARCHAR(20) UNIQUE,
-address VARCHAR(255),
-industry VARCHAR(100),
-website VARCHAR(255),
-status ENUM('Active', 'Inactive')
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    login VARCHAR(30) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    company_name VARCHAR(100),
+    registration_number VARCHAR(20) UNIQUE,
+    contact_person VARCHAR(100),
+    phone VARCHAR(20) UNIQUE,
+    address VARCHAR(255),
+    industry VARCHAR(100),
+    website VARCHAR(255),
+    status ENUM('Active', 'Inactive')
 );
 
 CREATE TABLE universities (
-id INT AUTO_INCREMENT PRIMARY KEY,
-email VARCHAR(100) UNIQUE NOT NULL,
-password_hash VARCHAR(255) NOT NULL,
-login VARCHAR(30) NOT NULL,
-university_name VARCHAR(100),
-contact_person VARCHAR(100),
-phone VARCHAR(20) UNIQUE,
-address VARCHAR(255),
-website VARCHAR(255)
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    login VARCHAR(30) NOT NULL,
+    university_name VARCHAR(100),
+    contact_person VARCHAR(100),
+    phone VARCHAR(20) UNIQUE,
+    address VARCHAR(255),
+    website VARCHAR(255)
 );
 
 CREATE TABLE practice (
-id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(100) NOT NULL,
-start_date DATE NOT NULL,
-end_date DATE NOT NULL,
-salary DECIMAL(10, 2) NOT NULL,
-description TEXT,
-places INT NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    places INT NOT NULL
 );
 
 CREATE TABLE practice_offer (
