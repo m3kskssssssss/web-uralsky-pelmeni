@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const [userCategory, setUserCategory] = useState('student'); // Значение по умолчанию
+    const [userCategory, setUserCategory] = useState('student');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // Инициализируем хук
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,18 +17,16 @@ const Login = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ login, password, userCategory }), // Добавляем категорию
+            body: JSON.stringify({ login, password, userCategory }),
         });
 
         const data = await response.json();
 
         if (response.ok) {
-            // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
             alert('Вход успешен!');
-            // Можно перенаправить пользователя на другую страницу
+            navigate('/projects'); // Переход на страницу /projects
         } else {
-            // Ошибка входа
             setError(data.message);
         }
     };
