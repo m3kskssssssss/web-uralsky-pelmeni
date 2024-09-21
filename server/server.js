@@ -15,7 +15,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
-  database: 'university_system'
+  database: 'practice_system'
 });
 
 db.connect(err => {
@@ -27,10 +27,25 @@ db.connect(err => {
 
 // Маршрут для регистрации
 app.post('/api/register', async (req, res) => {
-  const { email, password, login } = req.body;
+  const { email, password, login, userCategory } = req.body;
 
-  // Проверка существования email
-  const checkEmailSql = 'SELECT * FROM students WHERE email = ?';
+  let tableName;
+  switch (userCategory) {
+    case 'student':
+      tableName = 'students';
+      break;
+    case 'teacher':
+      tableName = 'universities';
+      break;
+    case 'enterprise':
+      tableName = 'companies';
+      break;
+    default:
+      return res.status(400).json({ error: 'Invalid user category' });
+  }
+
+  // Проверка существования email в выбранной таблице
+  const checkEmailSql = `SELECT * FROM ${tableName} WHERE email = ?`;
   db.query(checkEmailSql, [email], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
@@ -43,8 +58,8 @@ app.post('/api/register', async (req, res) => {
     // Хеширование пароля
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Вставка новой записи
-    const insertSql = 'INSERT INTO students (email, password_hash, login) VALUES (?, ?, ?)';
+    // Вставка новой записи в соответствующую таблицу
+    const insertSql = `INSERT INTO ${tableName} (email, password_hash, login) VALUES (?, ?, ?)`;
     db.query(insertSql, [email, hashedPassword, login], (err, result) => {
       if (err) {
         return res.status(500).json({ error: err.message });
@@ -53,6 +68,7 @@ app.post('/api/register', async (req, res) => {
     });
   });
 });
+
 
 // Маршрут для входа
 app.post('/api/login', async (req, res) => {
