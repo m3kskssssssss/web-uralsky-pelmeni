@@ -15,7 +15,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
-  database: 'mydatabase'
+  database: 'university_system'
 });
 
 db.connect(err => {
@@ -30,7 +30,7 @@ app.post('/api/register', async (req, res) => {
   const { email, password, login } = req.body;
 
   // Проверка существования email
-  const checkEmailSql = 'SELECT * FROM users WHERE email = ?';
+  const checkEmailSql = 'SELECT * FROM students WHERE email = ?';
   db.query(checkEmailSql, [email], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
@@ -44,7 +44,7 @@ app.post('/api/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Вставка новой записи
-    const insertSql = 'INSERT INTO users (email, password_hash, login) VALUES (?, ?, ?)';
+    const insertSql = 'INSERT INTO students (email, password_hash, login) VALUES (?, ?, ?)';
     db.query(insertSql, [email, hashedPassword, login], (err, result) => {
       if (err) {
         return res.status(500).json({ error: err.message });
@@ -57,7 +57,7 @@ app.post('/api/register', async (req, res) => {
 // Маршрут для входа
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
-  const sql = 'SELECT * FROM users WHERE email = ?';
+  const sql = 'SELECT * FROM students WHERE email = ?';
   db.query(sql, [email], async (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });

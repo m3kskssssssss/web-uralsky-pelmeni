@@ -36,6 +36,8 @@ node server/server.js
 
 ## Создание таблицы БД
 
+Если мешается, то можно DROP DATABASE mydatabase.
+
 1. Пишем в консоли `mysql -u root -p` или без пароля `mysql -u root`
 2. Код ниже
 ```sql
@@ -106,7 +108,7 @@ CREATE TABLE practice_offer (
     status ENUM('Pending', 'Approved', 'Rejected') NOT NULL,
     date_of_application DATETIME DEFAULT CURRENT_TIMESTAMP,
     student_id INT NOT NULL,
-    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (student_id) REFERENCES students(id),
     FOREIGN KEY (company_id) REFERENCES companies(id),
     FOREIGN KEY (practice_id) REFERENCES practice(id)
 );
