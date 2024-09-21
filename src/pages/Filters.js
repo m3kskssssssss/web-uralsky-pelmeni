@@ -107,7 +107,7 @@ const Filters = ({ onFilter }) => {
                     </div>
                 </div>
             )}
-            <button onClick={handleFilter}>ФИЛЬТР</button>
+            <button onClick={handleFilter}>ПРИМЕНИТЬ ФИЛЬТР</button>
         </div>
     );
 };
