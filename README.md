@@ -117,8 +117,8 @@ CREATE TABLE practice_offer (
 CREATE TABLE admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    login VARCHAR(30) UNIQUE NOT NULL
+    login VARCHAR(30) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL
 );
 ```
 3. Проверить что все ок - `SHOW DATABASES`. Будет 7 включая нашу.

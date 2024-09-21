@@ -16,6 +16,33 @@ import project05Big from "./../img/projects/05-big.jpg";
 import project06 from "./../img/projects/06.jpg";
 import project06Big from "./../img/projects/06-big.jpg";
 
+import project07 from "./../img/projects/07.jpg";
+import project07Big from "./../img/projects/07-big.jpg";
+
+import project08 from "./../img/projects/08.jpg";
+import project08Big from "./../img/projects/08-big.jpg";
+
+import project09 from "./../img/projects/09.jpg";
+import project09Big from "./../img/projects/09-big.jpg";
+
+import project10 from "./../img/projects/10.jpg";
+import project10Big from "./../img/projects/10-big.jpg";
+
+import project11 from "./../img/projects/11.jpg";
+import project11Big from "./../img/projects/11-big.jpg";
+
+import project12 from "./../img/projects/12.jpg";
+import project12Big from "./../img/projects/12-big.jpg";
+
+import project13 from "./../img/projects/13.jpg";
+import project13Big from "./../img/projects/13-big.jpg";
+
+import project14 from "./../img/projects/14.jpg";
+import project14Big from "./../img/projects/14-big.jpg";
+
+import project15 from "./../img/projects/15.jpg";
+import project15Big from "./../img/projects/15-big.jpg";
+
 const projects = [
     {
         specialty: "Младший разработчик",
@@ -122,8 +149,8 @@ const projects = [
     {
         specialty: "Специалист по кредитованию",
         description: "Оценка кредитных заявок и консультирование клиентов по вопросам кредитования. Стажер будет анализировать финансовые документы, оценивать риски и принимать участие в процессе выдачи кредитов. Эта практика подойдёт для студентов, желающих развить свои навыки в области кредитного анализа и работы с клиентами.",
-        img: project05,
-        imgBig: project05Big,
+        img: project07,
+        imgBig: project07Big,
         date: "01.12.2024 - 28.02.2025",
         university: "Уральский Государственный Экономический Университет",
         link_university: "https://www.usue.ru",
@@ -139,8 +166,8 @@ const projects = [
     {
         specialty: "Бухгалтер-стажер",
         description: "Ведение бухгалтерского учета, работа с первичной документацией и участие в составлении финансовых отчетов. Стажер будет осваивать программы для учета и научится проводить инвентаризацию. Практика идеальна для студентов, желающих углубиться в бухгалтерский учет и финансовую отчетность.",
-        img: project05,
-        imgBig: project05Big,
+        img: project08,
+        imgBig: project08Big,
         date: "15.11.2024 - 15.02.2025",
         university: "Уральский Государственный Экономический Университет",
         link_university: "https://www.usue.ru",
@@ -156,8 +183,8 @@ const projects = [
     {
         specialty: "Финансовый консультант",
         description: "Консультирование клиентов по вопросам инвестиций, сбережений и финансового планирования. Стажер будет помогать в подготовке индивидуальных финансовых планов и участвовать в встречах с клиентами. Практика предназначена для студентов, интересующихся финансовыми услугами и клиентским обслуживанием.",
-        img: project05,
-        imgBig: project05Big,
+        img: project09,
+        imgBig: project09Big,
         date: "01.10.2024 - 30.12.2024",
         university: "Уральский Федеральный Университет",
         link_university: "https://urfu.ru/ru/",
@@ -173,8 +200,8 @@ const projects = [
     {
         specialty: "Специалист по налогам",
         description: "Подготовка налоговых деклараций, анализ налоговых обязательств и консультирование по налоговым вопросам. Стажер будет изучать налоговое законодательство и применять его на практике. Эта практика подойдёт для студентов, желающих развить навыки в налоговом учете и консультировании.",
-        img: project05,
-        imgBig: project05Big,
+        img: project10,
+        imgBig: project10Big,
         date: "01.11.2024 - 28.01.2025",
         university: "Уральский Государственный Экономический Университет",
         link_university: "https://www.usue.ru",
@@ -190,8 +217,8 @@ const projects = [
     {
         specialty: "Журналист-стажер",
         description: "Подготовка и написание материалов для новостных публикаций, работа с источниками информации и проведение интервью. Стажер будет изучать основы журналистского мастерства, учиться формировать и представлять актуальные темы. Практика идеально подходит для студентов, желающих развить свои навыки в журналистике и коммуникации.",
-        img: project05,
-        imgBig: project05Big,
+        img: project11,
+        imgBig: project11Big,
         date: "01.11.2024 - 31.01.2025",
         university: "Уральский Федеральный Университет",
         link_university: "https://urfu.ru/ru/",
@@ -207,8 +234,8 @@ const projects = [
     {
         specialty: "Редактор контента",
         description: "Проверка и редактирование материалов перед публикацией, работа с журналистами и создание редакционных планов. Стажер будет разрабатывать стандарты качества для контента и анализировать реакции аудитории. Практика подойдет для студентов, заинтересованных в медиапроизводстве и редактур",
-        img: project05,
-        imgBig: project05Big,
+        img: project12,
+        imgBig: project12Big,
         date: "01.12.2024 - 28.02.2025",
         university: "Уральский Федеральный Университет",
         link_university: "https://urfu.ru/ru/",
@@ -224,8 +251,8 @@ const projects = [
     {
         specialty: "Копирайтер",
         description: "Написание статей, пресс-релизов и контента для социальных сетей. Стажер будет заниматься разработкой креативных идей и написанием текстов, соответствующих редакционным стандартам. Практика идеальна для студентов, стремящихся развить свои навыки в копирайтинге и контент-маркетинге.",
-        img: project05,
-        imgBig: project05Big,
+        img: project13,
+        imgBig: project13Big,
         date: "15.11.2024 - 15.02.2025",
         university: "Уральский Федеральный Университет",
         link_university: "https://urfu.ru/ru/",
@@ -241,8 +268,8 @@ const projects = [
     {
         specialty: "Фотограф",
         description: "Съемка событий, интервью и создание фотоматериалов для новостей. Стажер будет развивать свои навыки в фотографии, учиться работать с фотоаппаратом и постобработкой изображений. Практика подходит для студентов, заинтересованных в визуальной журналистике.",
-        img: project05,
-        imgBig: project05Big,
+        img: project14,
+        imgBig: project14Big,
         date: "01.10.2024 - 30.12.2024",
         university: "Уральский Федеральный Университет",
         link_university: "https://urfu.ru/ru/",
@@ -258,8 +285,8 @@ const projects = [
     {
         specialty: "Специалист по PR",
         description: "Разработка и реализация PR-кампаний, взаимодействие с медиа и управление репутацией компании. Стажер будет участвовать в создании пресс-релизов и анализе эффективности PR-акций. Практика подойдёт для студентов, желающих углубить свои знания в области PR и связей с общественностью.",
-        img: project05,
-        imgBig: project05Big,
+        img: project15,
+        imgBig: project15Big,
         date: "01.11.2024 - 28.01.2025",
         university: "Уральский Федеральный Университет",
         link_university: "https://pragencyural.ru",
