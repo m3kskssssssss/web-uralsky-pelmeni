@@ -1,7 +1,6 @@
+// src/App.js
 import "./styles/main.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -11,11 +10,11 @@ import Project from "./pages/Project";
 import Contacts from "./pages/Contacts";
 import Personal from "./pages/Personal";
 import Company from "./pages/Company";
-import Admin from './pages/Admin'
+import Admin from './pages/Admin';
 import University from "./pages/University";
 import Login from './components/navbar/Login';
 import Register from "./components/navbar/Register";
-
+import Confirmation from "./pages/Confirmation"; // Добавьте импорт новой страницы
 import ScrollToTop from "./utils/scrollToTop";
 
 function App() {
@@ -35,10 +34,8 @@ function App() {
           <Route path="/enterprise" element={<Company />} />
           <Route path="/teacher" element={<University />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/confirmation" element={<Confirmation />} /> {/* Добавьте новый маршрут */}
         </Routes>
-
-        <Project />
-      
         <Footer />
       </Router>
     </div>

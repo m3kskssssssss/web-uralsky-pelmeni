@@ -1,11 +1,16 @@
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "./../helpers/projectList";
 import './Project.css'; // Добавьте импорт стилей
 
 const Project = () => {
     const { id } = useParams(); // Получаем id из параметров маршрута
     const project = projects[id]; // Получаем проект по id
+    const navigate = useNavigate(); // Используем useNavigate для навигации
+
+    const handleRegistration = () => {
+        navigate('/confirmation');
+    };
 
     return (
         <main className="section">
@@ -13,20 +18,21 @@ const Project = () => {
                 {project && (
                     <div className="project-details">
                         {/* Заголовок проекта */}
-                        <h2 className="title-1">{project.specialty}</h2>
+                        <h2 className="title-1">{project.name}</h2>
 
                         <div className="project-details__content">
                             {/* Изображение проекта */}
                             <img
                                 src={project.imgBig}
-                                alt={project.title}
+                                alt={project.name}
                                 className="project-details__cover"
                             />
 
                             {/* Описание проекта */}
                             <div className="project-details__desc">
                                 {/* Даты проведения */}
-                                <p><strong>Даты проведения: </strong> {project.date}</p>
+                                <p><strong>Дата начала: </strong> {project.start_date}</p>
+                                <p><strong>Дата окончания: </strong> {project.end_date}</p>
 
                                 {/* Описание практики */}
                                 <p><strong>О практике: </strong> {project.description}</p>
@@ -65,7 +71,7 @@ const Project = () => {
                         </div>
 
                         {/* Кнопка "Зарегистрироваться на практику" */}
-                        <button className="btn btn-primary">Зарегистрироваться на практику</button>
+                        <button className="btn btn-primary" onClick={handleRegistration}>Зарегистрироваться на практику</button>
                     </div>
                 )}
             </div>
