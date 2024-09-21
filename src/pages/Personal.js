@@ -9,16 +9,13 @@ const Personal = () => {
         setSelectedCategory(category);
     };
 
-    const handleLogout = () => {
-        localStorage.removeItem('user'); // Удаляем данные пользователя из localStorage
-        navigate("/"); // Перенаправляем на главную страницу
-    };
+
 
     return (
         <main className="section">
             <div className="container">
                 <h1 className="title-1">Личный кабинет</h1>
-                <button onClick={handleLogout} className="logout-button">Выйти</button>
+                
 
                 <div className="personal-dashboard">
                     <div className="categories">
