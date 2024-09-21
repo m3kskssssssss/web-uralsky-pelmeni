@@ -27,11 +27,19 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('user'); // Удаляем данные пользователя из localStorage
+        localStorage.removeItem('userCategory'); // Удаляем категорию пользователя
         navigate("/"); // Перенаправляем на главную страницу
     };
 
     const isLoggedIn = () => {
         return localStorage.getItem('user') !== null;
+    };
+
+    const handlePersonalClick = () => {
+        const userCategory = localStorage.getItem('userCategory');
+        if (userCategory) {
+            navigate(`/${userCategory}`); // Перенаправляем на соответствующий личный кабинет
+        }
     };
 
     return (
@@ -59,8 +67,8 @@ const Navbar = () => {
                                 Контакты
                             </NavLink>
                         </li>
-                        <li className="nav-list__item">
-                            <NavLink to="/personal" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                        <li className="nav-list__item" onClick={handlePersonalClick}>
+                            <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 Личный кабинет
                             </NavLink>
                         </li>

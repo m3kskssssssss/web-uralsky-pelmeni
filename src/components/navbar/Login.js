@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const [userCategory, setUserCategory] = useState('student');
+    const [userCategory, setUserCategory] = useState('student'); // Добавим состояние для категории
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // Инициализируем хук
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,16 +15,20 @@ const Login = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ login, password, userCategory }),
+            body: JSON.stringify({ login, password, userCategory }), // Передаем категорию
         });
 
         const data = await response.json();
 
         if (response.ok) {
+            // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
+            localStorage.setItem('userCategory', userCategory); // Сохраняем категорию пользователя
             alert('Вход успешен!');
-            navigate('/projects'); // Переход на страницу /projects
+            // Можно перенаправить пользователя на его личный кабинет
+            window.location.href = `/${userCategory}`; // Перенаправляем на соответствующий личный кабинет
         } else {
+            // Ошибка входа
             setError(data.message);
         }
     };
@@ -55,14 +57,9 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
-                            <select
-                                className="title-2"
-                                value={userCategory}
-                                onChange={(e) => setUserCategory(e.target.value)}
-                                required
-                            >
+                            <select onChange={(e) => setUserCategory(e.target.value)} value={userCategory}>
                                 <option value="student">Студент</option>
-                                <option value="teacher">Университет/СПО</option>
+                                <option value="teacher">Учитель</option>
                                 <option value="enterprise">Предприятие</option>
                             </select>
                             <button className="title-2" type="submit">Войти</button>
