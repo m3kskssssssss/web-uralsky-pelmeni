@@ -25,6 +25,15 @@ const Navbar = () => {
         setModalOpen(false); // Закрыть модальное окно
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('user'); // Удаляем данные пользователя из localStorage
+        navigate("/"); // Перенаправляем на главную страницу
+    };
+
+    const isLoggedIn = () => {
+        return localStorage.getItem('user') !== null;
+    };
+
     return (
         <nav className="nav">
             <div className="container">
@@ -55,11 +64,17 @@ const Navbar = () => {
                                 Личный кабинет
                             </NavLink>
                         </li>
-                        <li className="nav-list__item" onClick={toggleModal}>
-                            <NavLink className={({ isActive }) => (isActive ? normalLink : normalLink)}>
-                            <img src={loginIcon} alt="Login Icon" />
-                            </NavLink>
-                        </li>
+                        {!isLoggedIn() ? (
+                            <li className="nav-list__item" onClick={toggleModal}>
+                                <NavLink className={({ isActive }) => (isActive ? normalLink : normalLink)}>
+                                    <img src={loginIcon} alt="Login Icon" />
+                                </NavLink>
+                            </li>
+                        ) : (
+                            <li className="nav-list__item" onClick={handleLogout}>
+                                <button className="logout-button">Выйти</button>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>

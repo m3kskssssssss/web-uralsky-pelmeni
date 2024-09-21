@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Personal = () => {
     const [selectedCategory, setSelectedCategory] = useState('personalInfo');
+    const navigate = useNavigate(); // Хук для навигации
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem('user'); // Удаляем данные пользователя из localStorage
+        navigate("/"); // Перенаправляем на главную страницу
     };
 
     return (
         <main className="section">
             <div className="container">
                 <h1 className="title-1">Личный кабинет</h1>
+                <button onClick={handleLogout} className="logout-button">Выйти</button>
 
                 <div className="personal-dashboard">
                     <div className="categories">
                         <h2 className="title-2">Выберите категорию</h2>
-                        <ul >
+                        <ul>
                             <li onClick={() => handleCategoryChange('personalInfo')}>Личная информация</li>
                             <li onClick={() => handleCategoryChange('interests')}>Мои интересы</li>
                         </ul>
@@ -47,7 +55,7 @@ const Personal = () => {
                             <div className="interests">
                                 <h2 className="title-2">Мои интересы</h2>
                                 <label>
-    <input type="checkbox" value="Гостиницы, рестораны, общепит" /> Гостиницы, рестораны, общепит
+<input type="checkbox" value="Гостиницы, рестораны, общепит" /> Гостиницы, рестораны, общепит
 </label>
 <label>
     <input type="checkbox" value="Государственные организации" /> Государственные организации
