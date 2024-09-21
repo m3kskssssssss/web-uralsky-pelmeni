@@ -10,7 +10,7 @@ const Personal = () => {
     return (
         <main className="section">
             <div className="container">
-                <h1 className="title-1">Личный кабинет</h1>
+                <h1 className="title-1">Личный кабинет ВУЗА или СПО</h1>
 
                 <div className="personal-dashboard">
                     <div className="categories">

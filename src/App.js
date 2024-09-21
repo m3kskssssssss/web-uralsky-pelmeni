@@ -28,11 +28,11 @@ function App() {
           <Route path="/projects" element={<Projects />}/>
           <Route path="/project/:id" element={<Project />}/>
           <Route path="/contacts" element={<Contacts />}/>
-          <Route path="/personal" element={<Personal />}/>
+          <Route path="/student" element={<Personal />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/university" element={<University />} />
+          <Route path="/enterprise" element={<Company />} />
+          <Route path="/teacher" element={<University />} />
         </Routes>
 
         <Project />
