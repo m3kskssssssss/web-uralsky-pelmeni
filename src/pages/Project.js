@@ -14,9 +14,11 @@ const Project = () => {
                 <h2 className="title-1">{project.title}</h2> {/* Используем название проекта */}
                 <img src={project.imgBig} alt={project.title} className="project-details__cover" /> {/* Используем большое изображение */}
                 <div className="project-details__desc">
-                    <p>Навыки: {project.skills}</p> {/* Используем навыки проекта */}
+                    <p>{project.date}</p> {/* Используем даты проведения практики */}
+                    <p>{project.description}</p> {/* Используем описание практики */}
+                    <p>{project.industry}</p>
                 </div>
-                <BtnGitHub link={project.gitHubLink}/> {/* Используем ссылку на GitHub */}
+                <BtnGitHub link={project.link}/> {/* Используем ссылку на GitHub */}
             </div>
         )}
     </div>
