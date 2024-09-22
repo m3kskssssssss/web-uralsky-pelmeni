@@ -101,11 +101,12 @@
 .modal {
     position: fixed;
 	padding: 20px 0;
+	color: black;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.708);
 	backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -118,7 +119,7 @@
 
 .modal-content {
     
-	background-color: #0000009e;
+	background-color: #0000009a;
     padding: 50px;
     border-radius: 25px;
     text-align: center;
@@ -131,6 +132,7 @@
 .close-button {
     position: absolute;
     top: 10px;
+	text-align: center;
     right: 10px;
     background: none;
     border: none;
