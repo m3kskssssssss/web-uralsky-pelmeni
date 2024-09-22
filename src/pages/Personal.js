@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Personal.css'; // Убедитесь, что вы импортируете файл стилей
 
 const Personal = () => {
     const [selectedCategory, setSelectedCategory] = useState('personalInfo');
@@ -9,20 +10,27 @@ const Personal = () => {
         setSelectedCategory(category);
     };
 
-
+    // Данные о практике
+    const practiceData = {
+        title: "Младший разработчик",
+        salary: "30,000 руб.",
+        status: "В рассмотрении",
+        startDate: "2024-10-31",
+        endDate: "2025-01-30"
+    };
 
     return (
         <main className="section">
             <div className="container">
                 <h1 className="title-1">Личный кабинет студента</h1>
                 
-
                 <div className="personal-dashboard">
                     <div className="categories">
                         <h2 className="title-2">Выберите категорию</h2>
                         <ul>
                             <li onClick={() => handleCategoryChange('personalInfo')}>Личная информация</li>
                             <li onClick={() => handleCategoryChange('interests')}>Мои интересы</li>
+                            <li onClick={() => handleCategoryChange('practice')}>Мои практики</li>
                         </ul>
                     </div>
 
@@ -51,8 +59,9 @@ const Personal = () => {
                         {selectedCategory === 'interests' && (
                             <div className="interests">
                                 <h2 className="title-2">Мои интересы</h2>
+                                {/* Ваши чекбоксы здесь */}
                                 <label>
-<input type="checkbox" value="Гостиницы, рестораны, общепит" /> Гостиницы, рестораны, общепит
+                                <input type="checkbox" value="Гостиницы, рестораны, общепит" /> Гостиницы, рестораны, общепит
 </label>
 <label>
     <input type="checkbox" value="Государственные организации" /> Государственные организации
@@ -131,8 +140,24 @@ const Personal = () => {
 </label>
 <label>
     <input type="checkbox" value="Энергетика" /> Энергетика
-</label>
+                                </label>
+                                {/* Другие чекбоксы... */}
                                 <button>Сохранить изменения</button>
+                            </div>
+                        )}
+
+                        {selectedCategory === 'practice' && ( // Добавлено новое условие для отображения практики
+                            <div className="practice-section"> {/* Новый класс для контейнера практики */}
+                                <h2 className="title-2">Мои практики</h2>
+                                <div className="practice-container"> {/* Новый класс для рамки */}
+                                    <div className="practice-item">
+                                        <h3>{practiceData.title}</h3>
+                                        <p>Зарплата: {practiceData.salary}</p>
+                                        <p>Статус: {practiceData.status}</p>
+                                        <p>Дата начала: {practiceData.startDate}</p>
+                                        <p>Дата окончания: {practiceData.endDate}</p>
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </div>

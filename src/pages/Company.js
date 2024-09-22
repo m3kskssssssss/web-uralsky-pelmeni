@@ -43,7 +43,6 @@ const Personal = () => {
                             <div className="interests">
                                 <h2 className="title-2">Мои интересы</h2>
                                 <label>
-    <input type="checkbox" value="Гостиницы, рестораны, общепит" /> Гостиницы, рестораны, общепит
 </label>
 
 
