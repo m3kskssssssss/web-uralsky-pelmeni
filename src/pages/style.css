@@ -217,3 +217,35 @@ button:hover {
 .close-button:hover {
     background-color: #8f6008; /* Цвет при наведении */
 }
+
+.contacts-wrapper {
+    display: flex; /* Размещаем элементы в одну строку */
+}
+
+.contacts-info {
+    width: 50%; /* Ширина для информации */
+    padding: 20px; /* Отступы */
+    box-sizing: border-box; /* Учитываем отступы в ширине */
+}
+
+.contacts-map {
+    width: 50%; /* Ширина для карты */
+    padding: 20px; /* Отступы */
+    box-sizing: border-box; /* Учитываем отступы в ширине */
+}
+
+.title-4 {
+    color: black;
+	text-align: center;
+	z-index: 3;
+	font-family: '8bit', sans-serif;
+    font-size: 30px;
+}
+
+.title-5 {
+    color: rgb(255, 187, 41);
+	text-align: center;
+	z-index: 3;
+	font-family: '8bit', sans-serif;
+    font-size: 50px;
+}
