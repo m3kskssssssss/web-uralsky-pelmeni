@@ -14,7 +14,7 @@ const Personal = () => {
     return (
         <main className="section">
             <div className="container">
-                <h1 className="title-1">Личный кабинет студента</h1>
+                <h1 className="title-4">Личный кабинет студента</h1>
                 
 
                 <div className="personal-dashboard">
@@ -23,6 +23,7 @@ const Personal = () => {
                         <ul>
                             <li onClick={() => handleCategoryChange('personalInfo')}>Личная информация</li>
                             <li onClick={() => handleCategoryChange('interests')}>Мои интересы</li>
+                            <li onClick={() => handleCategoryChange('interests')}>Мои практики</li>
                         </ul>
                     </div>
 

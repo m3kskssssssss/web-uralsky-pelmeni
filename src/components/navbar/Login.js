@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <main className="section">
             <div className="container">
-                <h1 className="title-1">Вход:</h1>
+                <h1 className="title-4">Вход:</h1>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 <ul className="content-list">
                     <li className="content-list__item">
@@ -57,11 +57,11 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
-                            <select onChange={(e) => setUserCategory(e.target.value)} value={userCategory}>
-                                <option value="student">Студент</option>
-                                <option value="teacher">Учитель</option>
-                                <option value="enterprise">Предприятие</option>
-                                <option value="admin">Администратор</option> {/* Новая категория */}
+                            <select className="title-2" onChange={(e) => setUserCategory(e.target.value)} value={userCategory}>
+                                <option className="title-2" value="student">Студент</option>
+                                <option className="title-2" value="teacher">Учитель</option>
+                                <option className="title-2" value="enterprise">Предприятие</option>
+                                <option className="title-2" value="admin">Администратор</option> {/* Новая категория */}
                             </select>
                             <button className="title-2" type="submit">Войти</button>
                         </form>

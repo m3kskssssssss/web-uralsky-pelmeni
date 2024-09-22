@@ -44,7 +44,7 @@ const Register = () => {
     return (
         <main className="section">
             <div className="container">
-                <h1 className="title-1">Регистрация:</h1>
+                <h1 className="title-4">Регистрация:</h1>
                 <ul className="content-list">
                     <li className="content-list__item">
                         <form onSubmit={handleSubmit}>

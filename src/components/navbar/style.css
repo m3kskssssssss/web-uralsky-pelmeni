@@ -71,10 +71,10 @@
 }
 
 .rotating-icon {
-    width: 42px; /* Установите нужный размер */
-    height: 42px; /* Установите нужный размер */
+    width: 52px; /* Установите нужный размер */
+    height: 52px; /* Установите нужный размер */
     background-color: white; /* Белый фон */
-    padding: 5px; /* Отступы вокруг картинки */
+    padding: 2px; /* Отступы вокруг картинки */
     border-radius: 50%; /* Закругленные края, если хотите круг */
     animation: rotate 5s linear infinite;
     box-sizing: border-box; /* Учитывать padding в общей ширине и высоте */
