@@ -15,7 +15,6 @@
   }
 
   .search {
-    margin-bottom: 20px;
     display: flex;
     align-items: center; /* Центрируем элементы по вертикали */
 }
