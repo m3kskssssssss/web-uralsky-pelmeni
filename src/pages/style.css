@@ -20,7 +20,7 @@
 }
 
 .search input {
-    padding: 10px 20px;
+    padding: 10px 200px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: '8bit', sans-serif;
@@ -39,6 +39,7 @@
     margin-left: 10px; /* Отступ между кнопками */
     width: 120px; /* Задайте желаемую ширину */
     height: 40px; /* Задайте желаемую высоту */
+    font-family: '8bit', sans-serif;
 }
 
 .search button:hover {

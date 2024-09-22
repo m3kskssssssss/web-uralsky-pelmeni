@@ -5,6 +5,7 @@
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
     margin-bottom: 1rem; /* Отступ снизу */
+    font-family: '8bit', sans-serif;
 }
 
 .filter-options {
@@ -22,3 +23,11 @@ select {
     width: 100%; /* Ширина выпадающего списка на 100% */
     max-width: 300px; /* Максимальная ширина выпадающего списка */
 }
+
+@font-face {
+	font-family: "8bit";
+	src: url("./../fonts/Visitor\ Rus.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+
+  }

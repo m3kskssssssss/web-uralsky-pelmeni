@@ -11,7 +11,7 @@ const Search = ({ onSearch }) => {
         <div className="search">
             <input
                 type="text"
-                placeholder="Поиск по проектам..."
+                placeholder="Поиск по практикам"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
