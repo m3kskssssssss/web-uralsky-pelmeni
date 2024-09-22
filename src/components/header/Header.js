@@ -93,7 +93,7 @@ const Header = () => {
                             <div className="tickers">
                                 <div className="ticker">
                                     {/* Повторяющийся текст */}
-                                    {Array(14).fill(<h2 className="ticker__head">НОВОСТИ ПРАКТИК</h2>)}
+                                    {Array(9).fill(<h2 className="ticker__head">НОВОСТИ ПРАКТИК</h2>)}
                                 </div>
                             </div>
                         </h1>
