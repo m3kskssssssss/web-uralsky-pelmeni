@@ -1,44 +1,44 @@
 // components/NewsList.js
 import React, { useState } from 'react';
 import './style.css'; // Импортируем стили, если необходимо
-import Img1 from "./../img/projects/01-big.jpg"
-import Img2 from "./../img/projects/02-big.jpg"
-import Img3 from "./../img/projects/03-big.jpg"
-import Img4 from "./../img/projects/04-big.jpg"
-import Img5 from "./../img/projects/05-big.jpg"
-import Img6 from "./../img/projects/06-big.jpg"
-import Img7 from "./../img/projects/07-big.jpg"
+import Img1 from "./../img/projects/16.png"
+import Img2 from "./../img/projects/17.png"
+import Img3 from "./../img/projects/18.png"
+import Img4 from "./../img/projects/19.png"
+import Img5 from "./../img/projects/20.png"
+import Img6 from "./../img/projects/21.png"
+import Img7 from "./../img/projects/22.png"
 
 
 
 const initialNewsData = [
     {
         id: 1,
-        title: "Первая новость",
+        title: "станочная инновация",
         image: Img1, // Укажите путь к изображению
-        content: "Краткое содержание первой новости...",
-        fullContent: "Полное содержание первой новости..."
+        content: "Инновационная система контроля выбросов искр...",
+        fullContent: "Инновационная система контроля выбросов искр появилась на одном из станков Смоленской области"
     },
     {
         id: 2,
-        title: "Вторая новость",
+        title: "цементооборот России и Беларуси",
         image: Img2,
-        content: "Краткое содержание второй новости...",
-        fullContent: "Полное содержание второй новости..."
+        content: "достиг рекордного значения в...",
+        fullContent: "достиг рекордного значения в 12 млрд килограммов цемента за 2023 год что обновило 32 летний максимум"
     },
     {
         id: 3,
-        title: "Треться новость",
+        title: "Архитектура производства",
         image: Img3,
-        content: "Краткое содержание тр новости...",
-        fullContent: "Полное содержание тр новости..."
+        content: "Обучиться на архитектора стало можно...",
+        fullContent: "Обучиться на архитектора стало можно онлайн через Госуслуги, откроется эта возможность после 7 ноября"
     },
     {
         id: 4,
-        title: "чт новость",
+        title: "Проложены новые маршруты",
         image: Img4,
-        content: "Краткое содержание чт новости...",
-        fullContent: "Полное содержание чт новости..."
+        content: "Газооборот доходит и до...",
+        fullContent: "Газооборот доходит и до наших самых дружественных восточных соседей - Китая!"
     },
     {
         id: 5,
@@ -47,20 +47,7 @@ const initialNewsData = [
         content: "Краткое содержание пт новости...",
         fullContent: "Полное содержание пт новости..."
     },
-    {
-        id: 6,
-        title: "шт новость",
-        image: Img6,
-        content: "Краткое содержание шт новости...",
-        fullContent: "Полное содержание шт новости..."
-    },
-    {
-        id: 7,
-        title: "см новость",
-        image: Img7,
-        content: "Краткое содержание см новости...",
-        fullContent: "Полное содержание см новости..."
-    },
+    
     // Добавьте больше новостей по мере необходимости
 ];
 
