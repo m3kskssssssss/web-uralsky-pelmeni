@@ -24,7 +24,7 @@ const Login = () => {
             // Успешный вход
             localStorage.setItem('user', JSON.stringify(data)); // Сохраняем данные пользователя
             localStorage.setItem('userCategory', userCategory); // Сохраняем категорию пользователя
-            alert('Вход успешен!');
+            
             // Можно перенаправить пользователя на его личный кабинет
             window.location.href = `/${userCategory}`; // Перенаправляем на соответствующий личный кабинет
         } else {
