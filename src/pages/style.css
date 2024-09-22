@@ -205,7 +205,9 @@ button:hover {
 }
 
 .close-button {
-    padding: 10px 15px;
+    top:0px ;
+    right: 2px;
+    padding: 3px 5px;
     background-color: #ffb700;
     color: white;
     border: none;
