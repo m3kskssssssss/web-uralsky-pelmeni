@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
+    password: '1234qw', // ЗДЕСЬ СТАВЬТЕ СВОЙ ПАРОЛЬ
     database: 'practice_system'
 });
 

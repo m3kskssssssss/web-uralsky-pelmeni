@@ -8,7 +8,7 @@ const Contacts = () => {
             <ul className="content-list">
               <li className="content-list__item">
                 <h2 className="title-4">Местоположение</h2>
-                <p>просп. Ленина, 24А, Екатеринбург, 620014</p>
+                <p>Физико-технологический институт УрФУ</p>
               </li>
               <li className="content-list__item">
                 <h2 className="title-4">Телефон для обратной связи</h2>
@@ -23,9 +23,11 @@ const Contacts = () => {
                 </p>
               </li>
               <li className="content-list__item">
-                <h2 className="title-4">Часы работы</h2>
-                <p>Понедельник - Пятница: 9:00 - 18:00</p>
-                <p>Суббота, Воскресенье: выходные</p>
+                <h2 className="title-4">Авторы работы</h2>
+                <p>Артём Артюшин</p>
+                <p>Матвей Черняков</p>
+                <p>Алёна Маркова</p>
+                <p>Стрельников Михаил</p>
               </li>
             </ul>
           </div>
