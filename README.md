@@ -1,4 +1,12 @@
-# ВАЖНОЕ
+# Биржа производственных практик:
+
+![Alt-текст](https://github.com/m3kskssssssss/web-uralsky-pelmeni/blob/main/Main_Page.gif)
+![Alt-текст](https://github.com/m3kskssssssss/web-uralsky-pelmeni/blob/main/Catalog.png)
+![Alt-текст](https://github.com/m3kskssssssss/web-uralsky-pelmeni/blob/main/News.png)
+![Alt-текст](https://github.com/m3kskssssssss/web-uralsky-pelmeni/blob/main/Database.png)
+
+
+# ИНСТРУКЦИЯ ПО ЗАПУСКУ (ХАКАТОН)
 
 Меняйте свой password в server/server.js
 
